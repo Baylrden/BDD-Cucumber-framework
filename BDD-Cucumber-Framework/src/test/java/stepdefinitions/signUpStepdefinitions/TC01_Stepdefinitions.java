@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.DashboardPage;
 import pages.HomepagePage;
 import pages.LoginPage;
 import utilities.ConfigReader;
@@ -14,6 +15,7 @@ public class TC01_Stepdefinitions {
     private static final Logger log = LoggerFactory.getLogger(TC01_Stepdefinitions.class);
     HomepagePage homepagePage = new HomepagePage();
     LoginPage loginPage = new LoginPage();
+    DashboardPage dashboardPage = new DashboardPage();
 
 
     @Given("User redirecting to {string}")
@@ -50,6 +52,18 @@ public class TC01_Stepdefinitions {
     public void verifying_that_login_process_is_failed() {
 
         Assert.assertTrue(loginPage.loginBtn.isDisplayed());
+
+    }
+
+    @Then("waits for {int} second")
+    public void waits_for_second(Integer int1) throws InterruptedException {
+        Thread.sleep(1000L *int1);
+    }
+
+    @Then("Verifying that login process is successful")
+    public void verifyingThatLoginProcessIsSuccessful() {
+
+        Assert.assertTrue(dashboardPage.dashboardBackground.isDisplayed());
 
     }
 }
