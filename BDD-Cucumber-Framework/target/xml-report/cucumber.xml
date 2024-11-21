@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="6.784" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="6.686">
+<testsuite name="Cucumber" time="16.268" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.621">
+<system-out><![CDATA[
+Given User redirecting to "testUrl".........................................passed
+And Clicking login button and redirecting to login page.....................passed
+And Writing "invalidEmail1" to email input..................................passed
+And Writing "invalidPass1" to password input................................passed
+When Clicking login button..................................................passed
+Then Verifying that login process is failed.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.874">
+<system-out><![CDATA[
+Given User redirecting to "testUrl".........................................passed
+And Clicking login button and redirecting to login page.....................passed
+And Writing "invalidEmail1" to email input..................................passed
+And Writing "validPass1" to password input..................................passed
+When Clicking login button..................................................passed
+Then Verifying that login process is failed.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.336">
+<system-out><![CDATA[
+Given User redirecting to "testUrl".........................................passed
+And Clicking login button and redirecting to login page.....................passed
+And Writing "validEmail1" to email input....................................passed
+And Writing "invalidPass1" to password input................................passed
+When Clicking login button..................................................passed
+Then Verifying that login process is failed.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="6.319">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed

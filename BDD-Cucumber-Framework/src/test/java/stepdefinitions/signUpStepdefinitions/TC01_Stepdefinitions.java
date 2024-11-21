@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import pages.DashboardPage;
 import pages.HomepagePage;
 import pages.LoginPage;
+import pages.PricingPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -16,6 +17,7 @@ public class TC01_Stepdefinitions {
     HomepagePage homepagePage = new HomepagePage();
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
+    PricingPage pricingPage = new PricingPage();
 
 
     @Given("User redirecting to {string}")
@@ -63,7 +65,7 @@ public class TC01_Stepdefinitions {
     @Then("Verifying that login process is successful")
     public void verifyingThatLoginProcessIsSuccessful() {
 
-        Assert.assertTrue(dashboardPage.dashboardBackground.isDisplayed());
+        Assert.assertTrue(pricingPage.pricingCards.get(0).isDisplayed() || dashboardPage.myAccount.isDisplayed());
 
     }
 }

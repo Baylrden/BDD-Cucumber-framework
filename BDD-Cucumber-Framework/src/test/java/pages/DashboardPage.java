@@ -13,4 +13,7 @@ public class DashboardPage {
 
     @FindBy(xpath = "//*[@class='Dashboard_Back__zU2pS']")
     public WebElement dashboardBackground;
+
+    @FindBy(xpath = "//*[@class='Sidebar_user_info_data__TpmZm']")
+    public WebElement myAccount;
 }
