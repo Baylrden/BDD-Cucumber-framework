@@ -19,5 +19,15 @@ public class LoginPage {
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement loginBtn;
 
+    @FindBy(xpath = "//*[@class='GoogleButton_externalLink__TpIpV GoogleButton_Primary__VVuAI']")
+    public WebElement loginViaGoogle;
+
+    @FindBy(xpath = "//*[@class='AzureButton_externalLink__xN6AJ AzureButton_Primary__4fsFH']")
+    public WebElement loginViaMicrosoft;
+
+
+
+
+
 
 }

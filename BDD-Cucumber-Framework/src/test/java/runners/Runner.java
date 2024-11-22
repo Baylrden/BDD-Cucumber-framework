@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/html-reports/report.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"},
-        features = "src/test/resources/features/signUpFlow",
+        features = "src/test/resources/features/loginFlow",
         glue = "stepdefinitions",
-    //    tags = "@wip",
+        tags = "@wip",
         dryRun = false // true- to generate methods for step definition classes
 )
 public class Runner {
