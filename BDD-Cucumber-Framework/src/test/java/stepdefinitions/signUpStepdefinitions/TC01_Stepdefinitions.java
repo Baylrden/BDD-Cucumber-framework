@@ -2,15 +2,19 @@ package stepdefinitions.signUpStepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pages.DashboardPage;
-import pages.HomepagePage;
-import pages.LoginPage;
-import pages.PricingPage;
+import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.Helper;
+
+import java.time.Duration;
 
 public class TC01_Stepdefinitions {
 
@@ -19,6 +23,7 @@ public class TC01_Stepdefinitions {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     PricingPage pricingPage = new PricingPage();
+    ExternalPages externalPages = new ExternalPages();
 
 
     @Given("User redirecting to {string}")
@@ -63,7 +68,7 @@ public class TC01_Stepdefinitions {
 
     }
 
-    @Then("waits for {int} second")
+    @Then("Waits for {int} second")
     public void waits_for_second(Integer int1) throws InterruptedException {
         Thread.sleep(1000L * int1);
     }
@@ -92,5 +97,33 @@ public class TC01_Stepdefinitions {
         }
     }
 
+    @Then("Filling email input in google page")
+    public void filling_email_input_in_google_page() {
+
+        externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("googleMail")+ Keys.ENTER);
+
+    }
+    @Then("Clicking next button")
+    public void clicking_next_button() {
+
+        externalPages.googleNextBtn.click();
+
+    }
+    @Then("Filling password input in google page")
+    public void filling_password_input_in_google_page() {
+
+        externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("googlePass")+Keys.ENTER);
+    }
+
+    @Then("Verifying that login process is successful via title")
+    public void verifyingThatLoginProcessIsSuccessfulViaTitle() {
+
+        String expectedResult = "QR Code Creator - Dashboard";
+
+        String actualResult = Driver.getDriver().getTitle();
+
+        Assert.assertEquals(expectedResult,actualResult);
+
+    }
 }
 

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.542" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Negative Login test" name="User trying to login with google account" time="8.444">
+<testsuite name="Cucumber" time="16.776" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Negative Login test" name="User trying to login with google account" time="16.643">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
-And waits for 3 second......................................................passed
-And Clicking "microsoft" button.............................................passed
-Then waits for 3 second.....................................................passed
+And Waits for 3 second......................................................passed
+And Clicking "google" button................................................passed
+Then Waits for 3 second.....................................................passed
+And Filling email input in google page......................................passed
+And Waits for 3 second......................................................passed
+And Filling password input in google page...................................passed
+And Waits for 3 second......................................................passed
+Then Verifying that login process is successful via title...................passed
 ]]></system-out>
 </testcase>
 </testsuite>

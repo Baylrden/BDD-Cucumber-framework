@@ -69,6 +69,13 @@
             <version>5.3.0</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version> <!-- Kullanılan SLF4J sürümüne uygun versiyonu kontrol et -->
+        </dependency>
+
     </dependencies>
 
 
