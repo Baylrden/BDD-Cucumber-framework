@@ -97,23 +97,24 @@ public class TC01_Stepdefinitions {
         }
     }
 
-    @Then("Filling email input in google page")
-    public void filling_email_input_in_google_page() {
-
-        externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("googleMail")+ Keys.ENTER);
-
-    }
+//    @Then("Filling email input in google page")
+//    public void filling_email_input_in_google_page() {
+//
+//
+//        externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("googleMail")+ Keys.ENTER);
+//
+//    }
     @Then("Clicking next button")
     public void clicking_next_button() {
 
         externalPages.googleNextBtn.click();
 
     }
-    @Then("Filling password input in google page")
-    public void filling_password_input_in_google_page() {
-
-        externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("googlePass")+Keys.ENTER);
-    }
+//    @Then("Filling password input in google page")
+//    public void filling_password_input_in_google_page() {
+//
+//        externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("googlePass")+Keys.ENTER);
+//    }
 
     @Then("Verifying that login process is successful via title")
     public void verifyingThatLoginProcessIsSuccessfulViaTitle() {
@@ -124,6 +125,38 @@ public class TC01_Stepdefinitions {
 
         Assert.assertEquals(expectedResult,actualResult);
 
+    }
+
+    @And("Filling email input in microsoft page")
+    public void fillingEmailInputInMicrosoftPage() {
+
+
+    }
+
+    @And("Filling email input in {string} page")
+    public void fillingEmailInputInPage(String loginMethod) {
+        if (loginMethod.contains("google")){
+            externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("googleMail")+ Keys.ENTER);
+        }
+        else if (loginMethod.contains("microsoft")){
+            externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("microsoftMail")+Keys.ENTER);
+
+        }
+    }
+
+    @And("Filling password input in {string} page")
+    public void fillingPasswordInputInPage(String loginMethod) {
+        if (loginMethod.contains("google")){
+            externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("googlePass")+Keys.ENTER);
+
+        }
+        else if (loginMethod.contains("microsoft")) {
+            externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("microsoftPass")+Keys.ENTER);
+            Helper.wait(2);
+            externalPages.microsoftStayBtn.click();
+
+
+        }
     }
 }
 

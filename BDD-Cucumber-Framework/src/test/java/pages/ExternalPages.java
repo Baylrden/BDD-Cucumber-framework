@@ -22,7 +22,7 @@ public class ExternalPages {
     @FindBy(xpath = "//*[@id='idSIButton9']")
     public WebElement microsoftNextBtn;
 
-    @FindBy(xpath = "//*[@class='VfPpkd-RLmnJb']")
-    public WebElement googleContinue;
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement microsoftStayBtn;
 
 }
