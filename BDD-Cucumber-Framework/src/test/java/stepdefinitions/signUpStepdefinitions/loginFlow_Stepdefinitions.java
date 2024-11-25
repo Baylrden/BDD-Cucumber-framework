@@ -2,11 +2,7 @@ package stepdefinitions.signUpStepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.*;
@@ -14,16 +10,15 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.Helper;
 
-import java.time.Duration;
+public class loginFlow_Stepdefinitions {
 
-public class TC01_Stepdefinitions {
-
-    private static final Logger log = LoggerFactory.getLogger(TC01_Stepdefinitions.class);
+    private static final Logger log = LoggerFactory.getLogger(loginFlow_Stepdefinitions.class);
     HomepagePage homepagePage = new HomepagePage();
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     PricingPage pricingPage = new PricingPage();
     ExternalPages externalPages = new ExternalPages();
+    SignUpPage signUpPage = new SignUpPage();
 
 
     @Given("User redirecting to {string}")
@@ -97,24 +92,12 @@ public class TC01_Stepdefinitions {
         }
     }
 
-//    @Then("Filling email input in google page")
-//    public void filling_email_input_in_google_page() {
-//
-//
-//        externalPages.externalEmailBox.sendKeys(ConfigReader.getProperty("googleMail")+ Keys.ENTER);
-//
-//    }
     @Then("Clicking next button")
     public void clicking_next_button() {
 
         externalPages.googleNextBtn.click();
 
     }
-//    @Then("Filling password input in google page")
-//    public void filling_password_input_in_google_page() {
-//
-//        externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("googlePass")+Keys.ENTER);
-//    }
 
     @Then("Verifying that login process is successful via title")
     public void verifyingThatLoginProcessIsSuccessfulViaTitle() {
@@ -157,6 +140,20 @@ public class TC01_Stepdefinitions {
 
 
         }
+    }
+
+    @And("Clicking Sign Up link")
+    public void clickingSignUpLink() {
+        signUpPage.signUpLink.click();
+    }
+
+    @Then("Verifying that user redirected to login page")
+    public void verifyingThatUserRedirectedToLoginPage() {
+        String actualTitle = Driver.getDriver().getTitle();
+
+        String expectedTitle = "QR Code Creator - Sign Up";
+
+        Assert.assertEquals(expectedTitle,actualTitle);
     }
 }
 

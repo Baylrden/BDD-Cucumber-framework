@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="22.784" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Negative Login test" name="User trying to login with microsoft account" time="22.636">
+<testsuite name="Cucumber" time="9.011" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="8.902">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;QR [Code Creator] - Sign Up&gt; but was:&lt;QR [Fast] - Sign Up&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<QR [Code Creator] - Sign Up> but was:<QR [Fast] - Sign Up>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinitions.signUpStepdefinitions.TC01_Stepdefinitions.verifyingThatUserRedirectedToLoginPage(TC01_Stepdefinitions.java:174)
+	at ✽.Verifying that user redirected to login page(file:///C:/Users/S393/IdeaProjects/BDD-Cucumber-framework/BDD-Cucumber-Framework/src/test/resources/features/loginFlow/TC07_SignUpLink.feature:11)
+]]>
+</failure>
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
 And Waits for 3 second......................................................passed
-And Clicking "microsoft" button.............................................passed
-Then Waits for 3 second.....................................................passed
-And Filling email input in "microsoft" page.................................passed
+And Clicking Sign Up link...................................................passed
 And Waits for 3 second......................................................passed
-And Filling password input in "microsoft" page..............................passed
-Then Verifying that login process is successful via title...................passed
+Then Verifying that user redirected to login page...........................failed
 ]]></system-out>
 </testcase>
 </testsuite>
