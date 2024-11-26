@@ -9,5 +9,5 @@ Feature: Negative Login test
     And Writing "validEmail1" to email input
     And Writing "validPass1" to password input
     When Clicking login button
-    Then waits for 3 second
+    Then Waits for 3 second
     Then Verifying that login process is successful

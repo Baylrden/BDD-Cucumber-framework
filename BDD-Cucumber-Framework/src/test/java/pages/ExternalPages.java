@@ -19,10 +19,10 @@ public class ExternalPages {
     @FindBy(xpath = "//*[@class='VfPpkd-vQzf8d']")
     public WebElement googleNextBtn;
 
-    @FindBy(xpath = "//*[@id='idSIButton9']")
-    public WebElement microsoftNextBtn;
-
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement microsoftStayBtn;
+
+    @FindBy(xpath = "//*[@id='iShowSkip']")
+    public WebElement microsoftSkip;
 
 }

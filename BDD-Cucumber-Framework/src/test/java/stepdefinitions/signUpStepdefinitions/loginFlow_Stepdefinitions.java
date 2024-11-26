@@ -12,7 +12,6 @@ import utilities.Helper;
 
 public class loginFlow_Stepdefinitions {
 
-    private static final Logger log = LoggerFactory.getLogger(loginFlow_Stepdefinitions.class);
     HomepagePage homepagePage = new HomepagePage();
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
@@ -136,6 +135,8 @@ public class loginFlow_Stepdefinitions {
         else if (loginMethod.contains("microsoft")) {
             externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("microsoftPass")+Keys.ENTER);
             Helper.wait(2);
+
+           // externalPages.microsoftSkip.click();
             externalPages.microsoftStayBtn.click();
 
 

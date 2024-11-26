@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/loginFlow",
         glue = "stepdefinitions",
         tags = "@wip",
-        dryRun = false // true- to generate methods for step definition classes
+        dryRun = true // true- to generate methods for step definition classes
 )
 public class Runner {
     // It's an empty class
