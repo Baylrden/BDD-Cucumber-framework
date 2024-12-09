@@ -136,7 +136,7 @@ public class loginFlow_Stepdefinitions {
             externalPages.externalPasswordBox.sendKeys(ConfigReader.getProperty("microsoftPass")+Keys.ENTER);
             Helper.wait(2);
 
-           // externalPages.microsoftSkip.click();
+            externalPages.microsoftSkip.click();
             externalPages.microsoftStayBtn.click();
 
 
