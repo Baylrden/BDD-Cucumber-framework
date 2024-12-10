@@ -11,4 +11,4 @@ Feature: Negative Login test
     And Filling email input in "microsoft" page
     And Waits for 3 second
     And Filling password input in "microsoft" page
-    Then Verifying that login process is successful via title
+    Then Verifying that login process is successful

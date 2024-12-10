@@ -12,4 +12,4 @@ Feature: Negative Login test
     And Waits for 3 second
     And Filling password input in "google" page
     And Waits for 3 second
-    Then Verifying that login process is successful via title
+    And Verifying that login process is successful

@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features/loginFlow",
         glue = "stepdefinitions",
-      //  tags = "@wip",
+       // tags = "@wip",
         dryRun = false // true- to generate methods for step definition classes
 )
 public class Runner {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="70.1" tests="7" skipped="0" failures="2" errors="0">
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="4.836">
+<testsuite name="Cucumber" time="57.992" tests="7" skipped="0" failures="0" errors="0">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.545">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -10,7 +10,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.773">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.912">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -20,7 +20,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.82">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.901">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -30,7 +30,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="7.229">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="5.953">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -41,7 +41,7 @@ Then Waits for 3 second.....................................................pass
 Then Verifying that login process is successful.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with google account" time="18.528">
+<testcase classname="Negative Login test" name="User trying to login with google account" time="16.165">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -52,18 +52,10 @@ And Filling email input in "google" page....................................pass
 And Waits for 3 second......................................................passed
 And Filling password input in "google" page.................................passed
 And Waits for 3 second......................................................passed
-Then Verifying that login process is successful via title...................passed
+And Verifying that login process is successful..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with microsoft account" time="22.509">
-<failure type="org.junit.ComparisonFailure" message="expected:&lt;[QR Code Creator - Dashboard]&gt; but was:&lt;[Let's protect your account]&gt;">
-<![CDATA[org.junit.ComparisonFailure: expected:<[QR Code Creator - Dashboard]> but was:<[Let's protect your account]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefinitions.signUpStepdefinitions.loginFlow_Stepdefinitions.verifyingThatLoginProcessIsSuccessfulViaTitle(loginFlow_Stepdefinitions.java:108)
-	at ✽.Verifying that login process is successful via title(file:///C:/Users/S393/IdeaProjects/BDD-Cucumber-framework/BDD-Cucumber-Framework/src/test/resources/features/loginFlow/TC06_MicrosoftLogin.feature:14)
-]]>
-</failure>
+<testcase classname="Negative Login test" name="User trying to login with microsoft account" time="17.809">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -73,25 +65,17 @@ Then Waits for 3 second.....................................................pass
 And Filling email input in "microsoft" page.................................passed
 And Waits for 3 second......................................................passed
 And Filling password input in "microsoft" page..............................passed
-Then Verifying that login process is successful via title...................failed
+Then Verifying that login process is successful.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="9.186">
-<failure type="org.junit.ComparisonFailure" message="expected:&lt;QR [Code Creator] - Sign Up&gt; but was:&lt;QR [Fast] - Sign Up&gt;">
-<![CDATA[org.junit.ComparisonFailure: expected:<QR [Code Creator] - Sign Up> but was:<QR [Fast] - Sign Up>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefinitions.signUpStepdefinitions.loginFlow_Stepdefinitions.verifyingThatUserRedirectedToLoginPage(loginFlow_Stepdefinitions.java:157)
-	at ✽.Verifying that user redirected to login page(file:///C:/Users/S393/IdeaProjects/BDD-Cucumber-framework/BDD-Cucumber-Framework/src/test/resources/features/loginFlow/TC07_SignUpLink.feature:11)
-]]>
-</failure>
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="8.576">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
 And Waits for 3 second......................................................passed
 And Clicking Sign Up link...................................................passed
 And Waits for 3 second......................................................passed
-Then Verifying that user redirected to login page...........................failed
+Then Verifying that user redirected to login page...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>
