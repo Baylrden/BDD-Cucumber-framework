@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="57.992" tests="7" skipped="0" failures="0" errors="0">
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.545">
+<testsuite name="Cucumber" time="104.705" tests="7" skipped="0" failures="0" errors="0">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="3.366">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -10,7 +10,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.912">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.718">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -20,7 +20,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.901">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="2.714">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -30,7 +30,7 @@ When Clicking login button..................................................pass
 Then Verifying that login process is failed.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="5.953">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="20.804">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -41,7 +41,7 @@ Then Waits for 3 second.....................................................pass
 Then Verifying that login process is successful.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with google account" time="16.165">
+<testcase classname="Negative Login test" name="User trying to login with google account" time="33.32">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -55,7 +55,7 @@ And Waits for 3 second......................................................pass
 And Verifying that login process is successful..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with microsoft account" time="17.809">
+<testcase classname="Negative Login test" name="User trying to login with microsoft account" time="33.336">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed
@@ -68,7 +68,7 @@ And Filling password input in "microsoft" page..............................pass
 Then Verifying that login process is successful.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="8.576">
+<testcase classname="Negative Login test" name="User trying to login with invalid email and invalid password" time="8.314">
 <system-out><![CDATA[
 Given User redirecting to "testUrl".........................................passed
 And Clicking login button and redirecting to login page.....................passed

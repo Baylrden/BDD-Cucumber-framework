@@ -70,7 +70,26 @@ public class loginFlow_Stepdefinitions {
     @Then("Verifying that login process is successful")
     public void verifyingThatLoginProcessIsSuccessful() {
 
-        Assert.assertTrue(pricingPage.pricingCards.get(0).isDisplayed() || dashboardPage.myAccount.isDisplayed());
+
+        boolean isPricingDisplayed = false;
+        boolean isDashboardDisplayed = false;
+
+        try {
+            isPricingDisplayed = pricingPage.pricingCards.get(1).isDisplayed();
+        } catch (Exception e) {
+            // Pricing card görünmüyorsa hatayı yakala ve devam et
+            System.out.println("Pricing page element not visible: " + e.getMessage());
+        }
+
+        try {
+            isDashboardDisplayed = dashboardPage.myAccount.isDisplayed();
+        } catch (Exception e) {
+            // Dashboard elementi görünmüyorsa hatayı yakala ve devam et
+            System.out.println("Dashboard element not visible: " + e.getMessage());
+        }
+
+// İkisinden birinin mutlaka görünür olduğundan emin ol
+        Assert.assertTrue(isPricingDisplayed || isDashboardDisplayed);
 
     }
 

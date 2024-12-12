@@ -2,6 +2,7 @@ Feature: Negative Login test
 
 
 
+
   Scenario: User trying to login with microsoft account
     Given User redirecting to "testUrl"
     And Clicking login button and redirecting to login page
