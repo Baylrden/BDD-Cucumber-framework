@@ -1,10 +1,8 @@
-package stepdefinitions.signUpStepdefinitions;
+package stepdefinitions.loginStepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
